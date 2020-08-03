@@ -13,11 +13,18 @@ class SignUpActivity : AppCompatActivity() {
 
         tvAlreadyHaveAccount.setOnClickListener {
             navigateToSignInPage()
+            //navigateToForget()
         }
     }
 
     private fun navigateToSignInPage() {
         val intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun navigateToForget() {
+        val intent = Intent(this, ForgotPasswordActivity::class.java)
         startActivity(intent)
         finish()
     }
